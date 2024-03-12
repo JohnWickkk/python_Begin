@@ -1,3 +1,5 @@
+print('Hello World')
+
 print('введіть число')
 x = int(input())
 print('виберіть дію надрукувавши: plus, minus, add, sub')
