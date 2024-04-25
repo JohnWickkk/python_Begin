@@ -1,22 +1,24 @@
-net_profit_data = {'Toshiba': 3000, 'Apple': 5000}
+net_cost_price_data = {'Toshiba': 500, 'Apple': 1000}
+upgrade_cond_disc = {'Toshiba': 25, 'Apple': 75}
+avg_price = {'Toshiba': 1200, 'Apple': 3000}
 
 
-def get_upgrade():
-    return f"You can upgrade your Toshiba product with a 50% discount!"
+class Product:
+    def __init__(self, name, net_cost_price, avg_price, upgrade_cond_disc):
+        self.name = name
+        self.net_cost_price = net_cost_price
+        self.avg_price = avg_price
+        self.upgrade_cond_disc = upgrade_cond_disc
+
+    def calculate_investment_return(self):
+        trade_revenue = self.avg_price - self.net_cost_price
+        discount_factor = 1 - (100 - self.upgrade_cond_disc) / 100
+        return trade_revenue * discount_factor
 
 
-def get_investment():
-    return net_profit_data.get('Toshiba')  # Get Toshiba's net profit
+brand_name = input("Enter brand name (Toshiba or Apple)")
 
 
-# No need for a class 'Toshiba' in this case
-
-if __name__ == "__main__":
-
-    laptop_brand = input('Enter your laptop brand (for axample, Toshiba): ')
-
-    if laptop_brand == 'Toshiba':
-        print(get_upgrade())
-        print(f"Investment return for 1 Toshiba share is {get_investment()} uah")
-    else:
-        print(f"We don't have information about {laptop_brand} upgrades or investments.")
+investment_return = Product(brand_name, net_cost_price_data[brand_name], avg_price[brand_name],
+                            upgrade_cond_disc[brand_name]).calculate_investment_return()
+print(f"Investment return for {brand_name}: {investment_return}")
