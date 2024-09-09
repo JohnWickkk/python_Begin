@@ -1,0 +1,12 @@
+{
+    "name": "1",
+    "description": "1",
+    "begDate": "2024-01-01",
+    "franchise": 0,
+    "bonusMalusCl": 3,
+    "riskOptions": true,
+    "k1": {
+        "F": "0.34"
+    },
+    "k9": {}
+}

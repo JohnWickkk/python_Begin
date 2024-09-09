@@ -58,7 +58,6 @@ class OutstaffEmployees(Employees):
                 f"рівень - {self.grade}, то базова зарплата - {self.base_salary}")
 
 
-# Code to test the classes (assuming `Ukraine` is a valid region)
 ukraine_employee = Employees("Ukraine", 2, 1000)
 outstaff_employee = OutstaffEmployees("Ukraine", 3, 1500)
 

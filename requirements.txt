@@ -1,0 +1,8 @@
+mammal~=0.0.1
+animal~=0.1
+matplotlib~=3.9.0
+numpy~=2.0.0rc1
+pandas~=2.2.2
+seaborn~=0.13.2
+content~=0.0.1
+google~=3.0.0
